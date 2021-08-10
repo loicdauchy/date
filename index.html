@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script src="../Date.js"></script>
+    <script>
+        console.log({
+            type: "CONSOLE displayFrenchFullDate function",
+            data: "Publié le" + ' ' + displayFrenchFullDate("12/02/2021")
+        })
+        console.log({
+            type: "CONSOLE displayFrenchDate function",
+            data: displayFrenchDate(new Date())
+        })
+        console.log({
+            type: "CONSOLE dateWithoutHoursIsEqual expected true",
+            data: dateWithoutHoursIsEqual(new Date(), new Date())
+        })
+        console.log({
+            type: "CONSOLE dateWithHoursIsEqual expected false",
+            data: dateWithHoursIsEqual(new Date(), "02-12-2021 10:00:00")
+        })
+         console.log({
+             type: "CONSOLE dateIsSup expected true",
+             data: dateIsSup(new Date(), "02-12-2021")
+         })
+        console.log({
+            type: "CONSOLE hourIsEqual expected true",
+            data: hourIsEqual("12:00", "12:00")
+        })
+        console.log({
+            type: "CONSOLE hourIsBetween expected true",
+            data: hourIsBetween("18:39", "08:00", "19:00")
+        })
+        console.log({
+            type: "CONSOLE hourIsSup expected false",
+            data: hourIsSup("12:00", "17:00")
+        })
+        console.log({
+            type: "CONSOLE displayFullFrenchHours function",
+            data: displayFullFrenchHours(new Date())
+        })
+        console.log({
+            type: "CONSOLE displayFrenchHours function",
+            data: displayFrenchHours(new Date())
+        })
+        console.log({
+            type: "CONSOLE displayHours function",
+            data: displayHours(new Date())
+        })
+        console.log({
+            type: "CONSOLE displayFullFrenchMinutes function",
+            data: displayFullFrenchMinutes(new Date())
+        })
+        console.log({
+            type: "CONSOLE displayFrenchMinutes function",
+            data: displayFrenchMinutes(new Date())
+        })
+
+    </script>
+</body>
+
+</html>
