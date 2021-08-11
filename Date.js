@@ -46,9 +46,7 @@ function dateWithHoursIsEqual(date1, date2) {
     }
 }
 
-// COMPARE IF DATE IS SUP
-// Return true if date1 is superior to date2 else false
-// Return type: boolean
+
 /**
  * 
  * @desc Function to know if the first date is sup or not.

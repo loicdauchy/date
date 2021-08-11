@@ -1,10 +1,14 @@
 // DATE METHODS LIBRARY
-// AUTHOR: WebAntek
+// AUTHOR: Loïc Dauchy
 
 
-// COMPARE DATE WITHOUT HOURS
-// Return True if equal else False
-// Return type: boolean
+/**
+ * @desc Function to know if two dates without hours are equal or not.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date1 - First date to compare.
+ * @param {*} date2 - Second date to compare.
+ * @returns True if equal else false.
+ */
 export const dateWithoutHoursIsEqual = (date1, date2) => {
 
     var firstDate = new Date(date1);
@@ -21,9 +25,14 @@ export const dateWithoutHoursIsEqual = (date1, date2) => {
 
 }
 
-// COMPARE DATE WITH HOURS
-// Return True if equal else False
-// Return type: boolean
+/**
+ * 
+ * @desc Function to know if two dates with hours are equal or not.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date1 - First date to compare.
+ * @param {*} date2 - Second date to compare.
+ * @returns True if equal else false.
+ */
 export const dateWithHoursIsEqual = (date1, date2) => {
     var firstDate = new Date(date1);
     var firstDateToCompare = firstDate.getDate()+'-'+firstDate.getMonth()+'-'+firstDate.getFullYear()+' '+firstDate.getHours()+':'+firstDate.getMinutes();
@@ -38,9 +47,14 @@ export const dateWithHoursIsEqual = (date1, date2) => {
     }
 }
 
-// COMPARE IF DATE IS SUP
-// Return true if date1 is superior to date2 else false
-// Return type: boolean
+/**
+ * 
+ * @desc Function to know if the first date is sup or not.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date1 - First date to compare.
+ * @param {*} date2 - Second date.
+ * @returns True if first date is sup else false.
+ */
 export const dateIsSup = (date1, date2) => {
     var firstDate = new Date(date1);
     var secondDate = new Date(date2);
@@ -53,9 +67,15 @@ export const dateIsSup = (date1, date2) => {
 }
 
 
-// COMPARE HOURS IS EQUAL
-// Return true if is equal else false
-// Return type: boolean
+/**
+ * 
+ * @desc Function to know if two hours is equal or not.
+ * @note The hours must be in the format "08:30"
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} hour1 - First hour to compare.
+ * @param {*} hour2 - Second hour to compare.
+ * @returns True if equal else false.
+ */
 export const hourIsEqual = (date1, date2) => {
     var firstDate = parseInt(date1.replace(':', ''));
 
@@ -68,9 +88,16 @@ export const hourIsEqual = (date1, date2) => {
     }
 }
 
-// COMPARE HOURS IS BETWEEN
-// Return true if is between else false
-// Return type: boolean
+/**
+ * 
+ * @desc Function to know if an hour is between two hours or not.
+ * @note The hours must be in the format "08:30"
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} dateToCompare - The first date parameters must be the date who is supposed to be in the time slot
+ * @param {*} start - Time slot start.
+ * @param {*} end - Time slot end.
+ * @returns True if the first parameter is between else false.
+ */
 export const hourIsBetween = (dateToCompare, start, end) => {
     var date = parseInt(dateToCompare.replace(':', ''));
     var firstDate = parseInt(start.replace(':', ''));
@@ -83,9 +110,15 @@ export const hourIsBetween = (dateToCompare, start, end) => {
     }
 }
 
-// COMPARE IF HOUR IS SUP
-// Return true if date1 is superior to date2 else false
-// Return type: boolean
+/**
+ * 
+ * @desc Function to know if the first hour parameter is sup or not.
+ * @note The hours must be in the format "08:30".
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} hour1 - First hour to compare.
+ * @param {*} hour2 - Second hour.
+ * @returns True if sup else false.
+ */
 export const hourIsSup = (date1, date2) => {
     var firstDate = parseInt(date1.replace(':', ''));
     var secondDate = parseInt(date2.replace(':', ''));
@@ -97,9 +130,12 @@ export const hourIsSup = (date1, date2) => {
     }
 }
 
-// DISPLAY FRENCH FULL DATE
-// Expected output ex: Mardi 07 Juillet 2021
-// Return type: string
+/**
+ * @desc Function for format a date to french format.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: Mardi 07 Juillet 2021
+ */
 export const displayFrenchFullDate = (date) => {
     var newDate = new Date(date);
 
@@ -163,9 +199,12 @@ export const displayFrenchFullDate = (date) => {
     return dayString+' '+day+' '+monthString+' '+years;
 }
 
-// DISPLAY FRENCH DATE
-// Expected output ex: 29/07/2021
-// Return type: string
+/**
+ * @desc Function for format a date to french format.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 29/07/2021
+ */
 export const displayFrenchDate = (date) => {
     var newDate = new Date(date);
 
@@ -185,9 +224,12 @@ export const displayFrenchDate = (date) => {
     return day + '/' + month + '/' + years;
 }
 
-// DISPLAY FULL FRENCH HOURS
-// Expected output ex: 11 heures et 23 minutes
-// Return type: string
+/**
+ * @desc Function for format a date for display hours.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11 heures et 23 minutes
+ */
 export const displayFullFrenchHours = (date) => {
     var time = new Date(date);
 
@@ -204,9 +246,12 @@ export const displayFullFrenchHours = (date) => {
     return hours + ' heures et ' + minutes + ' minutes';
 }
 
-// DISPLAY FRENCH HOURS
-// Expected output ex: 11h23
-// Return type: string
+/**
+ * @desc Function for format a date for display hours.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11h23
+ */
 export const displayFrenchHours = (date) => {
     var time = new Date(date);
     var hours = time.getHours();
@@ -222,9 +267,12 @@ export const displayFrenchHours = (date) => {
     return hours + 'h' + minutes;
 }
 
-// DISPLAY  HOURS
-// Expected output ex: 11:23
-// Return type: string
+/**
+ * @desc Function for format a date for display hours.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11:23
+ */
 export const displayHours = (date) => {
     var time = new Date(date);
     var hours = time.getHours();
@@ -240,9 +288,12 @@ export const displayHours = (date) => {
     return hours + ':' + minutes;
 }
 
-// DISPLAY FULL FRENCH MINUTES
-// Expected output ex: 11 minutes et 23 secondes
-// Return type: string
+/**
+ * @desc Function for format a date for display minutes.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11 minutes et 23 secondes
+ */
 export const displayFullFrenchMinutes = (date) => {
     var time = new Date(date);
     var minutes = time.getMinutes();
@@ -257,9 +308,12 @@ export const displayFullFrenchMinutes = (date) => {
     return minutes + ' minutes et ' + secondes + ' secondes';
 }
 
-// DISPLAY FRENCH MINUTES
-// Expected output ex: 11min 23s
-// Return type; string
+/**
+ * @desc Function for format a date for display minutes.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11min 23s
+ */
 export const displayFrenchMinutes = (date) => {
     var time = new Date(date);
     var minutes = time.getMinutes();
