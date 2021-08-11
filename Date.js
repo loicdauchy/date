@@ -1,10 +1,13 @@
 // DATE METHODS LIBRARY
-// AUTHOR: WebAntek
+// AUTHOR: Loïc Dauchy
 
-
-// COMPARE DATE WITHOUT HOURS
-// Return True if equal else False
-// Return type: boolean
+/**
+ * @desc Function to know if two dates without hours are equal or not.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date1 - First date to compare.
+ * @param {*} date2 - Second date to compare.
+ * @returns True if equal else false.
+ */
 function dateWithoutHoursIsEqual(date1, date2) {
 
     var firstDate = new Date(date1);
@@ -20,9 +23,14 @@ function dateWithoutHoursIsEqual(date1, date2) {
     }
 }
 
-// COMPARE DATE WITH HOURS
-// Return True if equal else False
-// Return type: boolean
+/**
+ * 
+ * @desc Function to know if two dates with hours are equal or not.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date1 - First date to compare.
+ * @param {*} date2 - Second date to compare.
+ * @returns True if equal else false.
+ */
 function dateWithHoursIsEqual(date1, date2) {
 
     var firstDate = new Date(date1);
@@ -41,6 +49,14 @@ function dateWithHoursIsEqual(date1, date2) {
 // COMPARE IF DATE IS SUP
 // Return true if date1 is superior to date2 else false
 // Return type: boolean
+/**
+ * 
+ * @desc Function to know if the first date is sup or not.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date1 - First date to compare.
+ * @param {*} date2 - Second date.
+ * @returns True if first date is sup else false.
+ */
 function dateIsSup(date1, date2) {
 
     var firstDate = new Date(date1);
@@ -53,15 +69,20 @@ function dateIsSup(date1, date2) {
     }
 }
 
+/**
+ * 
+ * @desc Function to know if two hours is equal or not.
+ * @note The hours must be in the format "08:30"
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} hour1 - First hour to compare.
+ * @param {*} hour2 - Second hour to compare.
+ * @returns True if equal else false.
+ */
+function hourIsEqual(hour1, hour2) {
 
-// COMPARE HOURS IS EQUAL
-// Return true if is equal else false
-// Return type: boolean
-function hourIsEqual(date1, date2) {
+    var firstDate = parseInt(hour1.replace(':', ''));
 
-    var firstDate = parseInt(date1.replace(':', ''));
-
-    var secondDate = parseInt(date2.replace(':', ''));
+    var secondDate = parseInt(hour2.replace(':', ''));
 
     if (firstDate === secondDate) {
         return true;
@@ -70,9 +91,17 @@ function hourIsEqual(date1, date2) {
     }
 }
 
-// COMPARE HOURS IS BETWEEN
-// Return true if is between else false
-// Return type: boolean
+
+/**
+ * 
+ * @desc Function to know if an hour is between two hours or not.
+ * @note The hours must be in the format "08:30"
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} dateToCompare - The first date parameters must be the date who is supposed to be in the time slot
+ * @param {*} start - Time slot start.
+ * @param {*} end - Time slot end.
+ * @returns True if the first parameter is between else false.
+ */
 function hourIsBetween(dateToCompare, start, end) {
 
     var date = parseInt(dateToCompare.replace(':', ''));
@@ -86,13 +115,20 @@ function hourIsBetween(dateToCompare, start, end) {
     }
 }
 
-// COMPARE IF HOUR IS SUP
-// Return true if date1 is superior to date2 else false
-// Return type: boolean
-function hourIsSup(date1, date2) {
 
-    var firstDate = parseInt(date1.replace(':', ''));
-    var secondDate = parseInt(date2.replace(':', ''));
+/**
+ * 
+ * @desc Function to know if the first hour parameter is sup or not.
+ * @note The hours must be in the format "08:30".
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} hour1 - First hour to compare.
+ * @param {*} hour2 - Second hour.
+ * @returns True if sup else false.
+ */
+function hourIsSup(hour1, hour2) {
+
+    var firstDate = parseInt(hour1.replace(':', ''));
+    var secondDate = parseInt(hour2.replace(':', ''));
 
     if (firstDate > secondDate) {
         return true;
@@ -102,9 +138,12 @@ function hourIsSup(date1, date2) {
 
 }
 
-// DISPLAY FRENCH FULL DATE
-// Expected output ex: Mardi 07 Juillet 2021
-// Return type: string
+/**
+ * @desc Function for format a date to french format.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: Mardi 07 Juillet 2021
+ */
 function displayFrenchFullDate(date) {
     var newDate = new Date(date);
 
@@ -168,9 +207,13 @@ function displayFrenchFullDate(date) {
     return dayString + ' ' + day + ' ' + monthString + ' ' + years;
 }
 
-// DISPLAY FRENCH DATE
-// Expected output ex: 29/07/2021
-// Return type: string
+
+/**
+ * @desc Function for format a date to french format.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 29/07/2021
+ */
 function displayFrenchDate(date) {
 
     var newDate = new Date(date);
@@ -192,9 +235,13 @@ function displayFrenchDate(date) {
 
 }
 
-// DISPLAY FULL FRENCH HOURS
-// Expected output ex: 11 heures et 23 minutes
-// Return type: string
+
+/**
+ * @desc Function for format a date for display hours.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11 heures et 23 minutes
+ */
 function displayFullFrenchHours(date) {
 
     var time = new Date(date);
@@ -213,9 +260,13 @@ function displayFullFrenchHours(date) {
 
 }
 
-// DISPLAY FRENCH HOURS
-// Expected output ex: 11h23
-// Return type: string
+
+/**
+ * @desc Function for format a date for display hours.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11h23
+ */
 function displayFrenchHours(date) {
 
     var time = new Date(date);
@@ -232,9 +283,13 @@ function displayFrenchHours(date) {
     return hours + 'h' + minutes;
 }
 
-// DISPLAY  HOURS
-// Expected output ex: 11:23
-// Return type: string
+
+/**
+ * @desc Function for format a date for display hours.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11:23
+ */
 function displayHours(date) {
 
     var time = new Date(date);
@@ -251,9 +306,13 @@ function displayHours(date) {
     return hours + ':' + minutes;
 }
 
-// DISPLAY FULL FRENCH MINUTES
-// Expected output ex: 11 minutes et 23 secondes
-// Return type: string
+
+/**
+ * @desc Function for format a date for display minutes.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11 minutes et 23 secondes
+ */
 function displayFullFrenchMinutes(date) {
 
     var time = new Date(date);
@@ -269,9 +328,13 @@ function displayFullFrenchMinutes(date) {
     return minutes + ' minutes et ' + secondes + ' secondes';
 }
 
-// DISPLAY FRENCH MINUTES
-// Expected output ex: 11min 23s
-// Return type: string
+
+/**
+ * @desc Function for format a date for display minutes.
+ * @link https://www.portfolio-loic-dauchy.com 
+ * @param {*} date - Date to format.
+ * @returns ex: 11min 23s
+ */
 function displayFrenchMinutes(date) {
 
     var time = new Date(date);
